@@ -1,0 +1,72 @@
+<ion-content class="ion-no-padding">
+  <ion-grid class="ion-no-padding">
+    <ion-row class="headerRow ion-text-center ion-justify-content-center ion-align-items-center">
+      <ion-col size-xs="12" size-md="6" class="ion-padding">
+        <div class="logo-svg">
+          <img src="./assets/img/ngx-masterclass.png" />
+        </div>
+        <h1>ngx<ion-text color="primary">MasterClass</ion-text></h1>
+        <p>
+          Améliore tes compétences sur <b>Angular</b> et devient un développeur plus performant.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center ion-justify-content-center ion-align-items-center">
+      <ion-col  size-xs="12" size-md="8">
+        <h2>Que propose <ion-text color="dark">NgxMasterClass</ion-text> ?</h2>
+        <p>
+          NgxMasterClass propose des cours en ligne <b>Angular avancé</b>. <br/>
+        </p>
+        <p>
+          Dans ces cours interactif, vous apprendrez avec Nicolas Fazio, comment developper les grandes applications Angular à l'échelle de l'entreprise. <br/>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="masterClassList ion-text-center ion-justify-content-center ion-align-items-center ion-padding-vertical">
+      <ion-col size-xs="12" size-md="8" class="ion-padding-vertical">
+        <h2>Les MasterClass Angular</h2>
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let mc of masterClass" size-xs="12" size-md="4">
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                    {{mc.name}}
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  
+                </ion-card-content>
+                <ion-button 
+                    class="ion-no-margin" 
+                    size="large"
+                    expand="full">Participer</ion-button>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+    <ion-row class="subFooter ion-justify-content-center ion-align-items-center">
+      <ion-col size-xs="12" size-md="4" class="ion-padding">
+       <img class="teacher" src="https://trainings.nicolasfazio.ch/wp-content/uploads/2020/05/IMG_2929-e1590958814469.jpg" />
+      </ion-col>
+      <ion-col size-xs="12" size-md="8" class="ion-padding">
+        <ion-row class="ion-no-padding">
+          <ion-col size-xs="12" size-md="10" class="ion-padding">
+            <h2>Formateur</h2>
+            <p>Salut, je suis Nicolas Fazio et ceux qui me connaissent m’appellent par mon nom de famille. Je suis ravis que tu ai trouvé ma page de formations pour apprendre à ton rythme le développement de logiciel cross-platform.</p>
+            <p>Cela fait depuis 2016 que j’ai eu la chance de découvrir le plaisir de pouvoir transmettre mes connaissances en tant que formateur.</p>
+            <p>Je suis ingénieur en architecture software et développe des applications et système informatique pour les entreprises depuis plus de 15 ans maintenant.</p>
+            <p>Je me réjouis de te retrouver sur mes formations.</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="footerRow">
+      <ion-col>
+        2021 - NgxMasterClass
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
