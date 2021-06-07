@@ -18,7 +18,7 @@
           NgxMasterClass propose des cours en ligne <b>Angular avancé</b>. <br/>
         </p>
         <p>
-          Dans ces cours interactif, vous apprendrez avec Nicolas Fazio, comment developper les grandes applications Angular à l'échelle de l'entreprise. <br/>
+          Dans ces cours interactif, tu vas apprendre avec Nicolas Fazio, comment developper les grandes applications Angular à l'échelle de d'entreprise.<br/>
         </p>
       </ion-col>
     </ion-row>
@@ -28,7 +28,7 @@
         <ion-grid>
           <ion-row>
             <ion-col *ngFor="let mc of masterClass" size-xs="12" size-md="4">
-              <ion-card>
+              <ion-card [disabled]="!mc.learning" [ngClass]="{'soon': !mc.learning}">
                 <ion-card-header>
                   <ion-card-title>
                     {{mc.name}}
@@ -40,7 +40,11 @@
                 <ion-button 
                     class="ion-no-margin" 
                     size="large"
-                    expand="full">Participer</ion-button>
+                    expand="full"
+                    [disabled]="!mc.learning"
+                    [routerLink]="'masterclass/' +mc.url">
+                  {{ mc.learning ? 'Participer' : 'coming soon'}}
+                </ion-button>
               </ion-card>
             </ion-col>
           </ion-row>

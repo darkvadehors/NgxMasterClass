@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DetailRoutingModule } from './detail-routing.module';
 import { DetailPageComponent } from './detail-page/detail-page.component';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
   ],
   imports: [
     CommonModule,
-    DetailRoutingModule
+    DetailRoutingModule,
+    IonicModule
   ]
 })
 export class DetailModule { }

@@ -78,7 +78,10 @@
       margin: 6rem 0 10rem;
     }
   }
-  
+  ion-card-header {
+    min-height: 100px;
+  }
+
   img.teacher {
     border-radius: 100%;
   }

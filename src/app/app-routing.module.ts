@@ -8,7 +8,7 @@ const routes: Routes = [
       .then(m => m.HomeModule)
   },
   {
-    path: 'master-class',
+    path: 'masterclass',
     children: [
       {
         path: '',

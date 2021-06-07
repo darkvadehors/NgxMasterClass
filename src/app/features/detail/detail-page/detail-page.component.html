@@ -1,1 +1,97 @@
-<p>detail-page works!</p>
+<ion-content class="ion-no-padding">
+  <ion-grid class="ion-no-padding">
+    <ion-row class="headerRow ion-text-center ion-justify-content-center ion-align-items-center">
+      <ion-col size-xs="12" size-md="10" class="ion-padding">
+        <div class="logo-svg">
+          <img src="./assets/img/ngx-masterclass.png" />
+        </div>
+        <h1>{{masterClass?.name}}</h1>
+        <p>
+          Online Workshop
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="learning ion-text-start ion-justify-content-center ion-align-items-start ion-padding">
+      <ng-container *ngIf="masterClass.desc && masterClass?.steps?.length > 0; else  ComingSoon">
+        <ion-col  
+            size-xs="12" size-md="5"
+            class="ion-padding">
+          <h2>À qui s'address ce workshop</h2>
+          <div [innerHTML]="masterClass.desc"></div>
+        </ion-col>
+        <ion-col 
+            size-xs="12" size-md="5"
+            class="ion-padding">
+          <h2>Ou à lieu la MasterClass?</h2>
+          <div>
+            <p>
+              La MasterClass <i>{{masterClass.name}}</i> se déroule <b>en ligne</b> et se compose d'une vidéos de formation <small>(VOD)</small>, d'outils, d'exemples et de question/réponse.
+            </p>
+            <p>
+              Tu effecte la masterclass en ligne et à ton rythme.
+            </p>
+          </div>
+        </ion-col>
+        <ion-col  
+            size-xs="12" size-md="5"
+            class="ion-padding">
+          <h2>Quand commance la Masterclass?</h2>
+          <div>
+            <p>
+              Cette masterclass est en ligne et commence dès ton inscription. Tu peux la terminer à ton rythme et la parcourir aussi rapidement ou lentement que tu le souhaite.
+            </p>
+          </div>
+        </ion-col>
+        <ion-col  
+            size-xs="12" size-md="5"
+            class="ion-padding">
+          <h2>Comment fonctionne cette Masterclass?</h2>
+          <div>
+            <p>
+              Tu regarde la vidéo, complét les actions, utilise le matériel de cours fourni. Pose des questions dans le groupe Slack, suit le processus, obtent des résultats.
+            </p>
+          </div>
+        </ion-col>
+      </ng-container>
+      <ng-template #ComingSoon>
+        <ion-col size-xs="12" size-md="8">
+          <h2>... Programme bientôt en ligne ...</h2>
+          <ion-button color="light" routerLink="../../">retour</ion-button>
+        </ion-col>        
+      </ng-template>
+    </ion-row>
+    <ion-row *ngIf="masterClass.desc && masterClass?.steps?.length > 0" class="programme ion-text-center ion-justify-content-center ion-align-items-center ion-padding-vertical">
+      <ion-col size-xs="12" size-md="8" class="ion-padding-vertical">
+        <h2>Ce que tu vas apprendre</h2>
+        <div class="ion-margin-bottom" [innerHTML]="masterClass.learning"></div>
+      </ion-col>
+      <ion-col size-xs="12" size-md="8" class="ion-padding-vertical ion-margin-top">
+        <h2>Programme</h2>
+      </ion-col>
+      <ion-col size-xs="12" size-md="6" class="ion-padding-vertical">
+        <ion-list class="ion-no-padding">
+          <ion-item *ngFor="let item of masterClass?.steps||[]">
+            <ion-label class="ion-text-wrap">
+              <ion-text color="primary">
+                <h3>{{item.name}}</h3>
+              </ion-text>
+              <ion-text color="secondary">
+                <p><small>{{item.desc}}</small></p>
+              </ion-text>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="12" class="ion-padding-vertical ion-margin-top">
+        <ion-button
+            size="large"
+            color="primary">Inscription MasterClass</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="footerRow">
+      <ion-col>
+        2021 - NgxMasterClass
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

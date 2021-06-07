@@ -34,7 +34,7 @@ var config = {
   deleteRemote,
   forcePasv
 };
-console.log('>>>>', process.env);
+
 // run lib to deploy
 ftpDeploy
   .deploy(config)

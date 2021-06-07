@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MasterClassService } from 'src/app/services/master-class/master-class.service';
 
 @Component({
   selector: 'app-detail-page',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailPageComponent implements OnInit {
 
-  constructor() { }
+  masterClass: any;
+
+  constructor(
+    private readonly _route: ActivatedRoute,
+    private readonly _service: MasterClassService
+  ) { }
 
   ngOnInit(): void {
+    const url = this._route.snapshot.params.name;
+    console.log('>>', url);
+    this.masterClass = this._service.getAllMasterClass().find(m => m.url === url)
   }
 
 }
