@@ -10,14 +10,14 @@
         <p>
           Inscrit toi pour recevoir un email dès la mise en ligne des masterclass.
         </p>
-        <form (ngSubmit)="sendForm()">
+        <form *ngIf="form" [formGroup]="form" (ngSubmit)="sendForm()">
           <ion-list lines="none" class="ion-no-padding ion-no-margin ion-margin-bottom">
             <ion-item>
               <ion-label>Email</ion-label>
-              <ion-input type="email"></ion-input>
+              <ion-input formControlName="email" type="email"></ion-input>
             </ion-item>
           </ion-list>
-          <ion-button>
+          <ion-button type="submit" [disabled]="!form?.valid">
             Je veux être notifié
           </ion-button>
         </form>

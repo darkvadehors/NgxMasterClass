@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  notifySlackUrl: 'https://hooks.slack.com/services/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'
 };
 
 /*

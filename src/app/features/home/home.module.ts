@@ -5,6 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { IonicModule } from '@ionic/angular';
 import { NotifyModalComponent } from './notify-modal/notify-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { NotifyModalComponent } from './notify-modal/notify-modal.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     HomeRoutingModule,
     IonicModule
   ]
