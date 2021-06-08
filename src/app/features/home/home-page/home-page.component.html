@@ -7,7 +7,7 @@
         </div>
         <h1>ngx<ion-text color="primary">MasterClass</ion-text></h1>
         <p>
-          Améliore tes compétences sur <b>Angular</b> et devient un développeur plus performant.
+          Améliore tes compétences sur <b>Angular</b> et devient un développeur plus performant
         </p>
       </ion-col>
     </ion-row>
@@ -18,7 +18,7 @@
           NgxMasterClass propose des cours en ligne <b>Angular avancé</b>. <br/>
         </p>
         <p>
-          Dans ces cours interactif, tu vas apprendre avec Nicolas Fazio, comment developper les grandes applications Angular à l'échelle de d'entreprise.<br/>
+          Dans ses cours interactifs, tu vas apprendre avec Nicolas Fazio, comment développer les grandes applications Angular à l'échelle d'entreprise.<br/>
         </p>
       </ion-col>
     </ion-row>
@@ -43,12 +43,23 @@
                     expand="full"
                     [disabled]="!mc.online"
                     [routerLink]="'masterclass/' +mc.url">
-                  {{ mc.learning ? 'Participer' : 'coming soon'}}
+                  {{ mc.online ? 'Participer' : 'coming soon'}}
                 </ion-button>
               </ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
+      </ion-col>
+      <ion-col size="12" class="ion-padding-top ion-margin-top">
+        <p>
+          Tu veux en savoir plus sur le contenu des MasterClass ? 
+          <br/>Inscrit toi maintenant pour être notifié dès la mise en ligne.
+        </p>
+        <ion-button 
+            (click)="notifyMe()"
+            size="large">
+          M'avertir lors de la mise en ligne
+        </ion-button>
       </ion-col>
     </ion-row>
     <ion-row class="subFooter ion-justify-content-center ion-align-items-center">
@@ -59,7 +70,7 @@
         <ion-row class="ion-no-padding">
           <ion-col size-xs="12" size-md="10" class="ion-padding">
             <h2>Formateur</h2>
-            <p>Salut, je suis Nicolas Fazio et ceux qui me connaissent m’appellent par mon nom de famille. Je suis ravis que tu ai trouvé ma page de formations pour apprendre à ton rythme le développement de logiciel cross-platform.</p>
+            <p>Salut, je suis Nicolas Fazio et ceux qui me connaissent m’appellent par mon nom de famille. Je suis ravi que tu aies trouvé ma page de formations pour apprendre à ton rythme le développement de logiciels cross-platform.</p>
             <p>Cela fait depuis 2016 que j’ai eu la chance de découvrir le plaisir de pouvoir transmettre mes connaissances en tant que formateur.</p>
             <p>Je suis ingénieur en architecture software et développe des applications et système informatique pour les entreprises depuis plus de 15 ans maintenant.</p>
             <p>Je me réjouis de te retrouver sur mes formations.</p>

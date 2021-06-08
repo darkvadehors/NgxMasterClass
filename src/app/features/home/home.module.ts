@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { IonicModule } from '@ionic/angular';
+import { NotifyModalComponent } from './notify-modal/notify-modal.component';
 
 
 @NgModule({
   declarations: [
-    HomePageComponent
+    HomePageComponent,
+    NotifyModalComponent
   ],
   imports: [
     CommonModule,

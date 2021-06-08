@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-button (click)="modalCtrl.dismiss()" fill="clear" class="closeBtn">
+    <ion-icon color="dark" slot="icon-only" name="close"></ion-icon>
+  </ion-button>
+  <ion-grid>
+    <ion-row class="ion-text-center ion-justify-content-center ion-align-items-center">
+      <ion-col>
+
+        <h1>Angular MasterClass</h1>
+        <p>
+          Inscrit toi pour recevoir un email dès la mise en ligne des masterclass.
+        </p>
+        <form (ngSubmit)="sendForm()">
+          <ion-list lines="none" class="ion-no-padding ion-no-margin ion-margin-bottom">
+            <ion-item>
+              <ion-label>Email</ion-label>
+              <ion-input type="email"></ion-input>
+            </ion-item>
+          </ion-list>
+          <ion-button>
+            Je veux être notifié
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
