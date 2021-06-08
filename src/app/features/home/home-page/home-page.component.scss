@@ -73,6 +73,7 @@
     align-items: center;
     align-content: center;
     z-index: 0;
+    border-bottom: solid 1px var(--ion-color-medium);
 
     ion-col {
       margin: 6rem 0 10rem;
@@ -94,7 +95,8 @@
   .subFooter {
     background: var(--ion-color-primary);
     color: var(--ion-color-light);
-    padding: 3rem 0;  
+    padding: 3rem 0; 
+    border-top: solid 1px var(--ion-color-medium);  
     
     a {
       color: var(--ion-color-dark);
