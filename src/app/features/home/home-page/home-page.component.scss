@@ -109,17 +109,17 @@
  }
 
 
- @media screen and (max-width: 668px) {
-  ion-row.headerRow {
-    h1 {
-      font-size: 2.2rem;
+  @media screen and (max-width: 668px) {
+    ion-row.headerRow {
+      h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
     }
-    p {
-      font-size: 1.1rem;
+    h2 {
+      font-size: 2rem;
     }
   }
-  h2 {
-    font-size: 2rem;
-  }
-}
 }

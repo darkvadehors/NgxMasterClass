@@ -61,14 +61,14 @@
       </ng-template>
     </ion-row>
     <ion-row *ngIf="masterClass.desc && masterClass?.steps?.length > 0" class="programme ion-text-center ion-justify-content-center ion-align-items-center ion-padding-vertical">
-      <ion-col size-xs="12" size-md="8" class="ion-padding-vertical">
+      <ion-col size-xs="12" size-md="8" class="ion-padding">
         <h2>Ce que tu vas apprendre</h2>
         <div class="ion-margin-bottom" [innerHTML]="masterClass.learning"></div>
       </ion-col>
-      <ion-col size-xs="12" size-md="8" class="ion-padding-vertical ion-margin-top">
+      <ion-col size-xs="12" size-md="8" class="ion-padding ion-margin-top">
         <h2>Programme</h2>
       </ion-col>
-      <ion-col size-xs="12" size-md="6" class="ion-padding-vertical">
+      <ion-col size-xs="12" size-md="6" class="ion-padding">
         <ion-list class="ion-no-padding">
           <ion-item *ngFor="let item of masterClass?.steps||[]">
             <ion-label class="ion-text-wrap">
