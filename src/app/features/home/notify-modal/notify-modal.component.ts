@@ -32,6 +32,8 @@ export class NotifyModalComponent implements OnInit {
   async sendForm(){
     if (this.form?.valid !== true) return;
     const url = environment.notifySlackUrl;
+    let message = 'Success message send';
+    let color = 'success';
     const msg = {
       blocks: [
         {
@@ -53,11 +55,13 @@ export class NotifyModalComponent implements OnInit {
     await this._http.post(url, JSON.stringify(msg), {headers, responseType: 'arraybuffer'})
       .toPromise()
       .catch(err => {
-        throw new Error('[ERROR] Send message error.');
+        // throw new Error('[ERROR] Send message error.');
+        message = '[ERROR] Send message error.';
+        color = 'danger';
       });
     const ionToast = await this._toastCtrl.create({
-      message: 'Success message send',
-      color: 'success',
+      message,
+      color,
       duration: 2000
     });
     ionToast.present();
