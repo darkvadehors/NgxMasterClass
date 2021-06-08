@@ -4,19 +4,23 @@ const MASTERCLASS = [
   {
     name: 'Angular Framework en Entreprise',
     desc: '',
-    url: 'angular-architecture-entreprise-workspace-nx'
+    url: 'angular-architecture-entreprise-workspace-nx',
+    online: false
   },
   {
     name: 'Reactive Angular Application avec RxJS & NGRX',
-    url: 'reactive-angular-application-rxjs-ngrx'
+    url: 'reactive-angular-application-rxjs-ngrx',
+    online: false
   },
   {
     name: `Backend NestJS pour projet Angular avec Workspace Nx`,
-    url: 'backend-nestjs-workspace-nx'
+    url: 'backend-nestjs-workspace-nx',
+    online: false
   },
   {
     name: `Angular DDD Architecture pour Entreprise avec Workspace Nx`,
     url: 'angular-ddd-architecture-entreprise-workspace-nx',
+    online: true,
     learning: `<p>À la fin de cette masterclass intensifve, tu seras capable de concevoir tes projets en mode monorepository avec Nx qui te permet de faire cohabiter l'ensemble des éléments dont ton projet est constitué (backend, frontend et librairies). </p><p>Tu apprendras comment subdiviser les fonctionnalités en plusieurs bibliothèques sur le principe DDD et comment définir des restrictions d'accès à appliquer pour la conception de l'architecture. De plus, tu repartiras avec un exemple complet de projet.</p>`,
     desc: `<p>Ce workshop intensif est destiné aux participants qui connaissent déjà les bases du développement avec Angular et qui sont définitivement déterminés à passer au niveau supérieur.</p> <p>Les développeurs expérimentés trouveront aussi leur bonheur en découvrant de nouveaux patterns d'architecture professionnelle et innovante avec Angular et Nx.</p>`,
     steps: [
@@ -48,13 +52,15 @@ const MASTERCLASS = [
   },
   {
     name: `Angular Reactive DDD Architecture pour Entreprise avec Workspace Nx`,
-    url: 'angular-reactive-ddd-architecture-entreprise-workspace-nx'
+    url: 'angular-reactive-ddd-architecture-entreprise-workspace-nx',
+    online: false
   },
   {
     name: `Backend pour Angular avec AngularFire et Google Cloud`,
-    url: 'backend-angularfire-deploy-google-cloud'
+    url: 'backend-angularfire-deploy-google-cloud',
+    online: false
   }
-]
+];
 @Injectable({
   providedIn: 'root'
 })
