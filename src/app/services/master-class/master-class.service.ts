@@ -55,9 +55,14 @@ const MASTERCLASS = [
     url: 'angular-reactive-ddd-architecture-entreprise-workspace-nx',
     online: false
   },
+  // {
+  //   name: `Backend pour Angular avec AngularFire et Google Cloud`,
+  //   url: 'backend-angularfire-deploy-google-cloud',
+  //   online: false
+  // },
   {
-    name: `Backend pour Angular avec AngularFire et Google Cloud`,
-    url: 'backend-angularfire-deploy-google-cloud',
+    name: `Nx Workspace, automatiser le déploiement dans le cloud avec les Github Actions`,
+    url: 'devops-cloud-deploy-nx-workspace-github-actions',
     online: false
   }
 ];
