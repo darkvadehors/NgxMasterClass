@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  notifySlackUrl: 'https://hooks.slack.com/services/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'
+  notifySlackUrl: 'aHR0cHM6Ly9ob29rcy5zbGFjay5jb20vc2VydmljZXMvVDAyNEJHUUdMM1YvQjAyM1dVMjlZUjUvUzc1dkNiSkxGVjZoNVJhYVlDaDZjeWxH'
 };
 
 /*

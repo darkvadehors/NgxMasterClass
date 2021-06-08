@@ -31,7 +31,7 @@ export class NotifyModalComponent implements OnInit {
 
   async sendForm(){
     if (this.form?.valid !== true) return;
-    const url = environment.notifySlackUrl;
+    const url = atob(environment.notifySlackUrl);
     let message = 'Success message send';
     let color = 'success';
     const msg = {
