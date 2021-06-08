@@ -28,7 +28,7 @@
         <ion-grid>
           <ion-row>
             <ion-col *ngFor="let mc of masterClass" size-xs="12" size-md="4">
-              <ion-card [disabled]="!mc.learning" [ngClass]="{'soon': !mc.learning}">
+              <ion-card [disabled]="!mc.online" [ngClass]="{'soon': !mc.online}">
                 <ion-card-header>
                   <ion-card-title>
                     {{mc.name}}
@@ -41,7 +41,7 @@
                     class="ion-no-margin" 
                     size="large"
                     expand="full"
-                    [disabled]="!mc.learning"
+                    [disabled]="!mc.online"
                     [routerLink]="'masterclass/' +mc.url">
                   {{ mc.learning ? 'Participer' : 'coming soon'}}
                 </ion-button>
